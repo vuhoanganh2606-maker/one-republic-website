@@ -1,92 +1,97 @@
 import Link from "next/link";
 
 export default function Footer() {
-return ( <footer id="contact" className="bg-black text-white"> <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-32"> <p className="text-red-500 uppercase tracking-[0.3em] text-xs md:text-sm mb-6">
-Let's Talk </p>
-    <h2 className="text-3xl md:text-7xl font-bold leading-none mb-6 md:mb-8">
-      Have a project
-      <br />
-      in mind?
-    </h2>
-
-    <a
-      href="mailto:hello@onerepublic.vn"
-      className="inline-block text-xl md:text-4xl font-medium hover:text-red-500 transition break-all"
+  return (
+    <footer
+      id="contact"
+      className="bg-[#B80000] text-[#F5F1EA] py-32 px-6"
     >
-      hello@onerepublic.vn
-    </a>
+      <div className="max-w-7xl mx-auto">
 
-    <div className="border-t border-white/10 my-10 md:my-20" />
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20">
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-      <div>
-        <p className="text-gray-500 mb-4">Navigation</p>
+          {/* Left */}
+          <div>
 
-        <div className="flex flex-wrap gap-x-4 gap-y-2">
-          <Link
-            href="/"
-            className="hover:text-red-500 transition"
-          >
-            Home
-          </Link>
+            <p className="uppercase tracking-[0.25em] text-sm mb-8 text-white/70">
+              Contact
+            </p>
 
-          <Link
-            href="/work"
-            className="hover:text-red-500 transition"
-          >
-            Work
-          </Link>
+            <h2 className="text-6xl md:text-8xl font-bold leading-[0.9]">
+              Let's create
+              <br />
+              something
+              <br />
+              remarkable.
+            </h2>
+
+          </div>
+
+          {/* Right */}
+          <div className="flex flex-col justify-between">
+
+            <div>
+
+              <p className="text-white/60 text-sm uppercase tracking-[0.2em] mb-4">
+                Email
+              </p>
+
+              <a
+                href="mailto:business@onerepublic.vn"
+                className="
+                  text-2xl md:text-3xl
+                  hover:opacity-80
+                  transition
+                "
+              >
+                business@onerepublic.vn
+              </a>
+
+            </div>
+
+            <div className="mt-16">
+
+              <p className="text-white/60 text-sm uppercase tracking-[0.2em] mb-6">
+                Follow
+              </p>
+
+              <div className="flex flex-wrap gap-6 text-lg">
+
+                <Link href="#">
+                  Behance
+                </Link>
+
+                <Link href="#">
+                  Instagram
+                </Link>
+
+                <Link href="#">
+                  LinkedIn
+                </Link>
+
+                <Link href="#">
+                  Facebook
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
-      </div>
 
-      <div>
-        <p className="text-gray-500 mb-4">Services</p>
+        {/* Bottom */}
 
-        <div className="flex flex-wrap gap-x-4 gap-y-2 text-white/80">
-          <p>Brand Identity</p>
-          <p>Packaging Design</p>
-          <p>Illustration</p>
-          <p>Creative Direction</p>
+        <div className="mt-24 pt-8 border-t border-white/20 flex justify-between text-sm text-white/50">
+
+          <p>© 2026 One Republic</p>
+
+          <p>Branding • Packaging • Illustration</p>
+
         </div>
+
       </div>
-
-      <div>
-        <p className="text-gray-500 mb-4">Social</p>
-
-        <div className="flex flex-wrap gap-x-4 gap-y-2">
-          <a
-            href="https://www.behance.net/onethink"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition"
-          >
-            Behance
-          </a>
-
-          <a
-            href="https://www.instagram.com/onerepublic.vn/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-red-500 transition"
-          >
-            Instagram
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="border-t border-white/10">
-    <div className="max-w-7xl mx-auto px-6 md:px-8 py-6 flex flex-col md:flex-row justify-between gap-3">
-      <p className="text-gray-500 text-sm">
-        © 2025 One Republic Studio
-      </p>
-
-      <p className="text-gray-500 text-sm">
-        Branding • Packaging • Illustration • Creative Direction
-      </p>
-    </div>
-  </div>
-</footer>
-);
+    </footer>
+  );
 }

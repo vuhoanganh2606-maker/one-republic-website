@@ -2,70 +2,64 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="pt-48 pb-24 px-6 bg-white">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen bg-[#002963] text-[#F5F1EA] flex items-center">
+      <div className="max-w-7xl mx-auto px-6 w-full">
 
-        {/* Left Content */}
-        <div>
-          <p className="text-[#B80000] uppercase tracking-widest text-sm mb-6">
-            Creative Design & Illustration Studio
-          </p>
+        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-end">
 
-          <h1 className="text-7xl font-bold leading-none text-gray-100">
-            BIG
-          </h1>
+          {/* Left */}
+          <div>
 
-          <h1 className="text-7xl font-bold text-[#B80000] leading-none">
-            BIGGER
-          </h1>
+            <p className="uppercase tracking-[0.3em] text-sm text-[#F5F1EA]/60 mb-8">
+              Creative Agency
+            </p>
 
-          <p className="mt-10 text-xl text-gray-600 max-w-xl">
-            We help ambitious brands grow bigger through strategic
-            branding, packaging design and illustration.
-          </p>
+            <h1 className="text-7xl md:text-8xl lg:text-[8rem] xl:text-[9rem] font-bold leading-[0.85]">
+              ONE
+              <br />
+              REPUBLIC
+            </h1>
 
-          <div className="flex gap-4 mt-10">
+          </div>
+
+          {/* Right */}
+          <div className="max-w-md ml-auto">
+
+            <p className="text-xl md:text-2xl leading-relaxed text-[#F5F1EA]/80">
+              Creating brands, packaging and visual stories
+              that people remember.
+            </p>
+
+            <div className="mt-12 space-y-3 text-lg text-[#F5F1EA]/90">
+
+              <p>Brand Identity</p>
+
+              <p>Packaging Design</p>
+
+              <p>Illustration</p>
+
+              <p>Creative Direction</p>
+
+            </div>
 
             <Link
               href="/work"
               className="
-                bg-[#B80000]
-                text-white
-                px-8
-                py-4
-                rounded-full
-                hover:opacity-90
-                transition
+                inline-flex
+                mt-12
+                border-b-2
+                border-[#B80000]
+                pb-2
+                text-[#F5F1EA]
+                hover:text-[#B80000]
+                transition-colors
               "
             >
-              View Our Work
+              View Work →
             </Link>
 
-<Link
-  href="/#contact"
-  className="
-    px-8 py-4
-    rounded-full
-    border border-black/20
-    text-black
-    font-medium
-    hover:border-black
-    hover:bg-black
-    hover:text-white
-    transition-all duration-300
-  "
->
-  Start A Project
-</Link>
-
           </div>
-        </div>
 
-        {/* Right Content */}
-        <div className="aspect-square rounded-[40px] bg-gray-100 flex items-center justify-center">
-          <h2 className="text-[120px] font-bold text-[#B80000]">
-            OR
-          </h2>
         </div>
 
       </div>

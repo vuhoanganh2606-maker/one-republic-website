@@ -1,19 +1,17 @@
 import Hero from "@/components/Hero";
 import FeaturedWork from "@/components/FeaturedWork";
-import Clients from "@/components/Clients";
-import Services from "@/components/Services";
-import Process from "@/components/Process";
-import About from "@/components/About";
+import ArchivePreview from "@/components/ArchivePreview";
+import AboutPreview from "@/components/AboutPreview";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <FeaturedWork />
-      <Clients />
-      <Services />
-      <Process />
-      <About />
-    </>
+      <ArchivePreview />
+      <AboutPreview />
+      <Footer />
+    </main>
   );
 }
