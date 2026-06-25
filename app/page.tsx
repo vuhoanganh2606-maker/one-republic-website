@@ -1,17 +1,24 @@
-import Hero from "@/components/Hero";
-import FeaturedWork from "@/components/FeaturedWork";
-import ArchivePreview from "@/components/ArchivePreview";
-import AboutPreview from "@/components/AboutPreview";
+import Navbar from "@/components/Navbar";
+import ProjectChapter from "@/components/ProjectChapter";
+import Archive from "@/components/Archive";
 import Footer from "@/components/Footer";
+import { projects } from "@/lib/projects";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <FeaturedWork />
-      <ArchivePreview />
-      <AboutPreview />
+    <>
+      <Navbar />
+
+      {projects.slice(0, 3).map((project) => (
+        <ProjectChapter
+          key={project.slug}
+          project={project}
+        />
+      ))}
+
+      <Archive />
+
       <Footer />
-    </main>
+    </>
   );
 }
