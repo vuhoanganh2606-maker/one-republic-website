@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
 
             <h2 className="text-6xl md:text-8xl font-bold leading-[0.9]">
-              Let's create
+              Let&apos;s create
               <br />
               something
               <br />

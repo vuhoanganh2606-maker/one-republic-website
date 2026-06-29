@@ -9,14 +9,17 @@ import StickyProjectInfo from "./StickyProjectInfo";
 import ProjectSlide from "./ProjectSlide";
 
 export default function ProjectGallery() {
-  const [currentProject, setCurrentProject] = useState<Project>(projects[0]);
+  const featuredProjects = projects.filter((project) => project.featured);
+  const [currentProject, setCurrentProject] = useState<Project>(
+    featuredProjects[0] ?? projects[0]
+  );
 
   return (
     <section className="relative">
 
       <StickyProjectInfo project={currentProject} />
 
-      {projects.map((project) => (
+      {featuredProjects.map((project) => (
         <ProjectSlide
           key={project.id}
           project={project}

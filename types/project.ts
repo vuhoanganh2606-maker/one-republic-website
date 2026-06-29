@@ -1,22 +1,31 @@
+export type ProjectCategory =
+  | "Brand Identity"
+  | "Packaging Design"
+  | "Illustration"
+  | "Creative Direction";
+
 export interface Project {
-  title: string;
+  id: number;
+
+  number: string;
+
   slug: string;
-  client: string;
+
+  title: string;
+
+  subtitle: string;
+
   year: string;
 
-  category: string[];
-  services: string[];
+  category: ProjectCategory[];
 
   cover: string;
+
   archiveCover?: string;
 
   imagePosition?: string;
 
   featured?: boolean;
+
   priority?: boolean;
-
-  description: string;
-  overview: string;
-
-  behance?: string;
 }

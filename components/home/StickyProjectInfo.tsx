@@ -14,8 +14,8 @@ export default function StickyProjectInfo({
   project,
 }: StickyProjectInfoProps) {
   return (
-    <div className="pointer-events-none sticky top-0 z-40 h-screen">
-      <div className="flex h-full items-end">
+    <div className="pointer-events-none absolute inset-x-0 top-0 z-40 h-full">
+      <div className="sticky top-0 flex h-screen items-end">
         <LayoutGrid>
           <div className="pointer-events-auto col-span-12 pb-16 md:col-span-6 md:pb-20 xl:col-span-5 xl:pb-24">
             <AnimatePresence mode="wait">

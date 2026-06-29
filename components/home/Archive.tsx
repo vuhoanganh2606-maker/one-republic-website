@@ -9,10 +9,12 @@ import ArchiveRow from "./ArchiveRow";
 import ArchivePreview from "./ArchivePreview";
 
 export default function Archive() {
-  const [hoveredProject, setHoveredProject] = useState<Project | null>(null);
+  const [hoveredProject, setHoveredProject] = useState<Project | null>(
+    projects[0] ?? null
+  );
 
   return (
-    <section className="bg-black py-40">
+    <section className="bg-black py-20">
       <div className="mx-auto grid max-w-[1600px] grid-cols-12 gap-12 px-10 lg:px-20">
 
         {/* LEFT */}
