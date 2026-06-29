@@ -1,24 +1,19 @@
-import Navbar from "@/components/Navbar";
-import ProjectChapter from "@/components/ProjectChapter";
-import Archive from "@/components/Archive";
-import Footer from "@/components/Footer";
-import { projects } from "@/lib/projects";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+import ProjectGallery from "@/components/home/ProjectGallery";
+import Archive from "@/components/home/Archive";
 
 export default function Home() {
   return (
-    <>
+    <main className="bg-black text-white">
       <Navbar />
 
-      {projects.slice(0, 3).map((project) => (
-        <ProjectChapter
-          key={project.slug}
-          project={project}
-        />
-      ))}
+      <ProjectGallery />
 
       <Archive />
 
       <Footer />
-    </>
+    </main>
   );
 }
