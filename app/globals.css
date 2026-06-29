@@ -1,45 +1,139 @@
 @import "tailwindcss";
 
+/* =========================================================
+   ONE REPUBLIC DESIGN SYSTEM V4
+========================================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* COLORS */
+  --background: #090909;
+  --foreground: #f5f1ea;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --color-text-secondary: rgba(245, 241, 234, 0.72);
+
+  --overlay-heavy: rgba(9, 9, 9, 0.82);
+  --overlay-medium: rgba(9, 9, 9, 0.45);
+
+  --brand-red: #b80000;
+  --brand-navy: #002963;
+
+  /* SPACING */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 80px;
+  --space-3xl: 120px;
+
+  /* LAYOUT */
+  --navbar-height: 72px;
+
+  /* MOTION */
+  --transition: 600ms ease;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+
   font-family: Arial, Helvetica, sans-serif;
-}
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(-50%);
-  }
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 25s linear infinite;
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.marquee:hover {
-  animation-play-state: paused;
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: var(--brand-red);
+  color: white;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.section-border {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.transition-default {
+  transition: all var(--transition);
 }

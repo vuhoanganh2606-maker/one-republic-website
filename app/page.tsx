@@ -1,19 +1,19 @@
-import Hero from "@/components/Hero";
-import FeaturedWork from "@/components/FeaturedWork";
-import Clients from "@/components/Clients";
-import Services from "@/components/Services";
-import Process from "@/components/Process";
-import About from "@/components/About";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+import ProjectGallery from "@/components/home/ProjectGallery";
+import Archive from "@/components/home/Archive";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <FeaturedWork />
-      <Clients />
-      <Services />
-      <Process />
-      <About />
-    </>
+    <main className="bg-black text-white">
+      <Navbar />
+
+      <ProjectGallery />
+
+      <Archive />
+
+      <Footer />
+    </main>
   );
 }
