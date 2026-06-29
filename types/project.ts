@@ -21,6 +21,8 @@ export interface Project {
 
   cover: string;
 
+  imagePosition?: string;
+
   featured?: boolean;
 
   priority?: boolean;

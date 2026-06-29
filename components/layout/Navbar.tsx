@@ -1,77 +1,74 @@
 "use client";
 
 import Link from "next/link";
+import DESIGN from "@/lib/design";
+
+const navigation = [
+  {
+    label: "Work",
+    href: "/work",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
+];
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="flex items-center justify-between py-8">
-
-          {/* Logo Text */}
+    <header
+      className={`
+        fixed
+        inset-x-0
+        top-0
+        ${DESIGN.zIndex.navbar}
+      `}
+    >
+      <div
+        className={`
+          ${DESIGN.layout.gutter}
+          ${DESIGN.navbar.padding}
+        `}
+      >
+        <div className="flex items-center justify-between">
+          {/* Logo */}
           <Link
             href="/"
-            className="
-              text-[#F5F1EA]
-              font-semibold
-              tracking-[0.25em]
-              uppercase
-              text-sm
-            "
+            className={`
+              ${DESIGN.typography.meta}
+              transition-colors
+              duration-300
+              hover:text-[var(--brand-red)]
+            `}
           >
-            One Republic
+            ONE REPUBLIC
           </Link>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-10">
-
-            <Link
-              href="/work"
-              className="
-                text-[#F5F1EA]
-                text-sm
-                uppercase
-                tracking-[0.2em]
-                hover:text-[#B80000]
-                transition
-              "
-            >
-              Work
-            </Link>
-
-            <Link
-              href="/about"
-              className="
-                text-[#F5F1EA]
-                text-sm
-                uppercase
-                tracking-[0.2em]
-                hover:text-[#B80000]
-                transition
-              "
-            >
-              About
-            </Link>
-
-            <Link
-              href="/contact"
-              className="
-                text-[#F5F1EA]
-                text-sm
-                uppercase
-                tracking-[0.2em]
-                hover:text-[#B80000]
-                transition
-              "
-            >
-              Contact
-            </Link>
-
+          <nav
+            className="flex items-center gap-10"
+            aria-label="Primary Navigation"
+          >
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`
+                  ${DESIGN.typography.meta}
+                  transition-colors
+                  duration-300
+                  hover:text-[var(--brand-red)]
+                `}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
-
         </div>
-
       </div>
     </header>
   );

@@ -29,7 +29,7 @@ export default function ProjectSlide({
         }
       },
       {
-        threshold: 0.6,
+        threshold: 0.55,
       }
     );
 
@@ -43,18 +43,22 @@ export default function ProjectSlide({
       ref={ref}
       className="relative h-screen overflow-hidden"
     >
-      {/* Background Image */}
       <Image
         src={project.cover}
         alt={project.title}
         fill
         priority={project.priority}
-        className="object-cover"
         sizes="100vw"
+        className={`object-cover ${
+          project.imagePosition ?? "object-center"
+        }`}
       />
 
-      {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/10" />
+      <div className="absolute inset-0 bg-black/45" />
+
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent" />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
     </section>
   );
 }

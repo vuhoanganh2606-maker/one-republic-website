@@ -4,68 +4,134 @@ export const projects: Project[] = [
   {
     id: 1,
     number: "01",
-
     slug: "nguyet-lam-gia",
-
     title: "Nguyệt Lâm Gia",
-
     subtitle: "Packaging as Cultural Memory",
-
     year: "2025",
-
-    category: [
-      "Packaging Design",
-      "Illustration"
-    ],
-
+    category: ["Packaging Design", "Illustration"],
     cover: "/work/nguyet-lam-gia/cover.webp",
-
+    archiveCover: "/work/nguyet-lam-gia/cover.webp",
+    imagePosition: "object-[50%_45%]",
     featured: true,
-
     priority: true,
   },
 
   {
     id: 2,
-
     number: "02",
-
     slug: "nguyet-da-dong-duong",
-
     title: "Nguyệt Dạ Đông Dương",
-
     subtitle: "A Modern Interpretation of Eastern Luxury",
-
     year: "2025",
-
-    category: [
-      "Packaging Design"
-    ],
-
+    category: ["Packaging Design"],
     cover: "/work/nguyet-da-dong-duong/cover.webp",
-
+    archiveCover: "/work/nguyet-da-dong-duong/cover.webp",
+    imagePosition: "object-[52%_42%]",
     featured: true,
   },
 
   {
     id: 3,
-
     number: "03",
-
     slug: "luan-vu-minh-nguyet",
-
     title: "Luân Vũ Minh Nguyệt",
-
     subtitle: "Illustration Beyond Decoration",
-
     year: "2025",
-
-    category: [
-      "Illustration"
-    ],
-
+    category: ["Illustration"],
     cover: "/work/luan-vu-minh-nguyet/cover.webp",
-
+    archiveCover: "/work/luan-vu-minh-nguyet/cover.webp",
+    imagePosition: "object-[48%_50%]",
     featured: true,
+  },
+
+  {
+    id: 4,
+    number: "04",
+    slug: "pho-thi-hoi-an",
+    title: "Phố Thị Hội An",
+    subtitle: "A Contemporary Heritage Identity",
+    year: "2025",
+    category: ["Brand Identity"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 5,
+    number: "05",
+    slug: "viet-son-tea",
+    title: "Việt Sơn Tea",
+    subtitle: "Tea Packaging Inspired by Northern Mountains",
+    year: "2025",
+    category: ["Packaging Design"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 6,
+    number: "06",
+    slug: "an-nam-coffee",
+    title: "An Nam Coffee",
+    subtitle: "Coffee Brand with a Modern Vietnamese Spirit",
+    year: "2024",
+    category: ["Brand Identity", "Packaging Design"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 7,
+    number: "07",
+    slug: "the-lotus",
+    title: "The Lotus",
+    subtitle: "Editorial Illustration Collection",
+    year: "2024",
+    category: ["Illustration"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 8,
+    number: "08",
+    slug: "sai-gon-craft",
+    title: "Saigon Craft",
+    subtitle: "Visual Identity for Modern Handcraft",
+    year: "2024",
+    category: ["Brand Identity"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 9,
+    number: "09",
+    slug: "moc-huong",
+    title: "Mộc Hương",
+    subtitle: "Packaging Inspired by Traditional Apothecary",
+    year: "2024",
+    category: ["Packaging Design", "Illustration"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
+  },
+
+  {
+    id: 10,
+    number: "10",
+    slug: "origin-stories",
+    title: "Origin Stories",
+    subtitle: "Creative Direction for a Cultural Publication",
+    year: "2024",
+    category: ["Creative Direction"],
+    cover: "/work/placeholder.webp",
+    archiveCover: "/work/placeholder.webp",
+    imagePosition: "object-center",
   },
 ];
